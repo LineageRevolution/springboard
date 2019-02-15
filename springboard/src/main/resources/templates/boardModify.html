@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<body>
+		<form action="/boardModify" method="post">
+		<input type="hidden" name="boardNo" th:value="${board.boardNo}">
+		<div class="form-group">
+            <label for="inputNo"></label>
+            <input type="hidden" class="form-control" name="boardNo" th:readonly="${board.boardNo}">
+        </div>
+		<div class="form-group">
+            <label for="inputTitle">제목</label>
+            <input type="text" class="form-control" name="boardTitle" th:value="${board.boardTitle}">
+        </div>
+        <div class="form-group">
+            <label for="inputContent">내용</label>
+            <input type="text" class="form-control" name="boardContent" th:value="${board.boardContent}">
+        </div>
+        <div class="form-group">
+            <label for="inputUser">이름</label>
+            <input type="text" class="form-control" name="boardUser" th:value="${board.boardUser}">
+        </div>
+          <div class="form-group text-center">
+            <input type="submit" value="입력완료">   <!--  <i></i>: 글자를 기울여서 표시하는 태그 -->
+        </div>
+      </form>
+	</body>
+</html>
