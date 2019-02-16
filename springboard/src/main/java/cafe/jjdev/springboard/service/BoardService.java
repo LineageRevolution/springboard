@@ -35,6 +35,7 @@ public class BoardService {
 			startPageNum= currentPage -((lastPageNum/2)-1); //
 			lastPageNum += (startPageNum-1);
 		}
+		currentPage = (currentPage-1)*Row_Per_Page;
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("currentPage", currentPage); //attribute처럼 "current"변수를 선언한다
 		map.put("rowPerPage", Row_Per_Page);

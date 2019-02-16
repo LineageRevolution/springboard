@@ -19,7 +19,7 @@
 				,board_user as boardUser
 				,board_date as boardDate 
 			FROM board 
-			ORDER BY board_date DESC 
+			ORDER BY board_no DESC 
 			LIMIT #{currentPage}, #{rowPerPage}
 			
 	</select>
@@ -47,10 +47,8 @@
 			
 	</insert>
 	<delete id="deleteBoard" parameterType="cafe.jjdev.springboard.vo.Board">
-			DELETE
-			FROM board
-			WHERE board_no = #{boardNo}
-			AND board_pw = #{boardPw}
+			DELETE FROM board WHERE board_no=#{boardNo}
+			 AND board_pw=#{boardPw}
 	</delete>
 	<update id="updateBoard" parameterType="cafe.jjdev.springboard.vo.Board">
 			UPDATE board 

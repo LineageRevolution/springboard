@@ -46,6 +46,8 @@ public class BoardController {
 	    //삭제 액션
 	    @PostMapping("boardDelete")
 	    public String boardRemove(Board board) {
+	    	System.out.println(board.getBoardNo()+"<--no");
+	    	System.out.println(board.getBoardPw()+"<--pw");
 	  	  int result = boardService.removeBoard(board);
 	  	  System.out.println("쿼리문 실행 결과 --> " + result);
 	  	  return "redirect:/boardList";
@@ -54,7 +56,6 @@ public class BoardController {
 	    //삭제 폼
 	    @GetMapping("boardDelete")
 		public String removeBoardForm(Board board) {
-			boardService.removeBoard(board);
 			return "boardRemove";
 		}
 	    //수정 폼
