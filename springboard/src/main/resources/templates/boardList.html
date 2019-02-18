@@ -8,21 +8,15 @@
 		<tr>
 			<td>boardNo</td>
 			<td>boardTitle</td>
-			<td>boardContent</td>
 			<td>boardUser</td>
 			<td>boardDate</td>
-			<td>수정</td>
-			<td>삭제</td>
 		</tr>
 		<!-- map안의 list를 가져와서 사용 -->
 		<tr th:each="m : ${map.list}">
 			<td th:text="${m.boardNo}"></td>
-			<td th:text="${m.boardTitle}"></td>
-			<td th:text="${m.boardContent}"></td>
+			<td><a th:href="@{/boardModify(boardNo=${m.boardNo})}" th:text="${m.boardTitle}"></a></td>
 			<td th:text="${m.boardUser}"></td>
 			<td th:text="${m.boardDate}"></td>
-			<td><a th:href="@{/boardModify(boardNo=${m.boardNo})}">수정</a></td>
-			<td><a th:href="@{/boardDelete(boardNo=${m.boardNo})}">삭제</a></td>
 		</tr>
 	</table>
 	<a th:href=@{/boardList}>처음으로</a>

@@ -1,7 +1,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>리스트</title>
+<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+	        $('#boardBtn').click(function(){
+	        	$('#boardRemoveForm').submit(function(event){
+	        		if($('#boardPw').val().length<4){
+		            	$('#boardPw').attr('placeholder','4자리이상 입력해주세요.');
+		            	$('#boardPw').focus();
+		            	return false;
+	        		}
+	        	});
+	        });
+	    });
+	</script>
 </head>
 <body>
 		<form action="/boardDelete" method="post">
@@ -15,4 +28,5 @@
 		</div>
 	</form>
 </body>
+
 </html>

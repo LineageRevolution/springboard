@@ -47,8 +47,11 @@
 			
 	</insert>
 	<delete id="deleteBoard" parameterType="cafe.jjdev.springboard.vo.Board">
-			DELETE FROM board WHERE board_no=#{boardNo}
-			 AND board_pw=#{boardPw}
+			DELETE FROM board 
+		WHERE 
+			board_no=#{boardNo}
+		   AND
+			board_pw=#{boardPw}
 	</delete>
 	<update id="updateBoard" parameterType="cafe.jjdev.springboard.vo.Board">
 			UPDATE board 

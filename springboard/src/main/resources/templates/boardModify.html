@@ -4,7 +4,7 @@
 		<input type="hidden" name="boardNo" th:value="${board.boardNo}">
 		<div class="form-group">
             <label for="inputNo"></label>
-            <input type="hidden" class="form-control" name="boardNo" th:readonly="${board.boardNo}" readonly="readonly">
+            <input type="hidden" class="form-control" name="boardNo" th:readonly="${board.boardNo}">
         </div>
 		<div class="form-group">
             <label for="inputTitle">title</label>
@@ -20,11 +20,18 @@
         </div>
         <div class="form-group">
             <label for="inputPw">password</label>
-            <input type="text" class="form-control" name="boardPw" th:value="${board.boardPw}">
+            <input type="text" class="form-control" name="boardUser" th:value="${board.boardPw}">
         </div>
           <div class="form-group text-center">
             <input type="submit" value="수정"> 
         </div>
       </form>
+      </table>
 	</body>
+	<body>
+	<form action="/boardDelete" method="post">
+	<div class="form-group text-center">
+            <input type="submit" value="삭제"> 
+    </div>
+</body>
 </html>
