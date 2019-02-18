@@ -52,10 +52,11 @@
 	</delete>
 	<update id="updateBoard" parameterType="cafe.jjdev.springboard.vo.Board">
 			UPDATE board 
-			SET 
-			board_title=#{boardTitle}, 
+		SET 
+			board_title=#{boardTitle},
 			board_content=#{boardContent}
-			WHERE board_no=#{boardNo}
-			AND board_pw=#{boardPw} 
+		WHERE board_no=#{boardNo}
+			AND
+			  board_pw=#{boardPw}
 	</update>
 </mapper>

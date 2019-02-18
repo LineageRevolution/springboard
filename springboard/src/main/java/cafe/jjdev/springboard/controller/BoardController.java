@@ -69,6 +69,6 @@ public class BoardController {
 	    @RequestMapping("/boardModify")
 	    public String boardModify(Board board) {
 	    	boardService.modifyBoard(board);
-			return "redirect:/boardService";
+			return "redirect:/boardList";
 	    }
 	}
